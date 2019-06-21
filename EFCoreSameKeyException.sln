@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreSameKeyException", "EFCoreSameKeyException\EFCoreSameKeyException.csproj", "{7404E91F-1F0D-46F0-8426-29CE033DAA19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7404E91F-1F0D-46F0-8426-29CE033DAA19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7404E91F-1F0D-46F0-8426-29CE033DAA19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7404E91F-1F0D-46F0-8426-29CE033DAA19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7404E91F-1F0D-46F0-8426-29CE033DAA19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {778EC489-496C-4D82-8060-FC67395FA138}
+	EndGlobalSection
+EndGlobal
