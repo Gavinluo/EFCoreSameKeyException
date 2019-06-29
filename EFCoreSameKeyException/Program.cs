@@ -13,40 +13,15 @@ namespace EFCoreSameKeyException
         {
             using (var context = new demoContext())
             {
-                var defaultPrimaryKey = "TestPK1";
-                var newPrimaryKey = "TestPK2";
-
-                context.Database.ExecuteSqlCommand("delete from item_Detail");
-                context.Database.ExecuteSqlCommand("delete from item");
-
-                var item1 = new item { ItemGID = defaultPrimaryKey };
-                item1.ItemID = item1.ItemGID;
-                item1.TS = DateTime.Now;
-                item1.itemDetail = new List<itemDetail>();
-                var detail1 = new itemDetail()
+                var defaultPrimaryKey = "test";
+                var data = context.Set<item>().Find(defaultPrimaryKey);
+                context.Set<item>().Remove(data);
+                var item1 = new item
                 {
-                    GUID = Guid.NewGuid().ToString(),
-                    ItemGID = defaultPrimaryKey,
-                    LineId = 1
+                    ItemGID = defaultPrimaryKey,ItemID = defaultPrimaryKey,
+                    TS = DateTime.Now
                 };
-                item1.itemDetail.Add(detail1);
                 context.Set<item>().Add(item1);
-                context.SaveChanges();
-
-                var item = context.Set<item>().Find(defaultPrimaryKey);
-
-                var item2 = new item { ItemGID = newPrimaryKey };
-                item2.ItemID = item2.ItemGID;
-                item2.TS = DateTime.Now;
-                item2.itemDetail = new List<itemDetail>();
-                item2.itemDetail.Add(new itemDetail
-                {
-                    ItemGID = defaultPrimaryKey,
-                    LineId = 1,
-                    GUID = Guid.NewGuid().ToString(),
-                });
-
-                context.Set<item>().Add(item2);
                 context.SaveChanges();
             }
         }

@@ -1,2 +1,7 @@
 EFCoreSameKeyException/bin/*
 EFCoreSameKeyException/obj/*
+.vs/EFCoreSameKeyException/v16/Server/sqlite3/storage.ide-wal
+.vs/EFCoreSameKeyException/v16/Server/sqlite3/storage.ide-shm
+.vs/EFCoreSameKeyException/v16/Server/sqlite3/storage.ide
+.vs/EFCoreSameKeyException/v16/Server/sqlite3/db.lock
+.vs/EFCoreSameKeyException/v16/.suo
